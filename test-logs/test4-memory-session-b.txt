@@ -1,0 +1,35 @@
+===================================================================
+TEST 4 — Long-Term Memory — Session B (recall)
+Timestamp: 2026-09-10T07:10:59Z
+Command:
+  agentcore invoke '{"prompt": "Do you remember my name and communication preference?", "customer_id": "CUST-123", "session_id": "s-B"}'
+===================================================================
+
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+
+╭─────────────────────────────────────────────────────────────────────── customer_support_agent ────────────────────────────────────────────────────────────────────────╮
+│ Session: 21c3268b-f76e-4ef9-92ff-d175b9f7daaf                                                                                                                         │
+│ Request ID: ad34a3ef-76f3-4926-bb6d-f00980e69aa3                                                                                                                      │
+│ ARN: arn:aws:bedrock-agentcore:us-east-1:666445334748:runtime/customer_support_agent-UIR40b7qPD                                                                       │
+│ Logs: aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --follow            │
+│       aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --since 1h          │
+│ GenAI Dashboard: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#gen-ai-observability/agent-core                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Response:
+I don't currently have access to any prior conversation context or your personal details. As a new session, I don't retain memory of past interactions.
+
+To help you with your account or orders, I'll need some basic information like your customer ID or order number. Could you please share:
+
+1. Your customer ID or the email associated with your account, **or**
+2. The order number you'd like assistance with
+
+Once you provide this, I can look up your profile and order history to assist you effectively.

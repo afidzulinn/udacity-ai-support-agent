@@ -1,0 +1,1 @@
+[{"Rules":[{"ResourceType":"collection","Resource":["collection/csai-kb-collection"],"Permission":["aoss:*"]},{"ResourceType":"index","Resource":["index/csai-kb-collection/*"],"Permission":["aoss:*"]}],"Principal":["arn:aws:iam::666445334748:role/csai-kb-role","arn:aws:sts::666445334748:assumed-role/voclabs/user5338573=470131bf-04e0-48da-bf99-3cd8f1028f4a"]}]

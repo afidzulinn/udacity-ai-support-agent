@@ -1,0 +1,179 @@
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+
+Configuring Bedrock AgentCore...
+✓ Using file: main.py
+
+🔍 Detected dependency file: pyproject.toml
+Press Enter to use this file, or type a different path (use Tab for autocomplete):
+Path or Press Enter to use detected dependency file: pyproject.toml
+
+
+
+
+
+
+                                                                    Path or Press Enter to use detected dependency file: pyproject.toml
+✓ Using requirements file: pyproject.toml
+
+🚀 Deployment Configuration
+Select deployment type:
+  1. Direct Code Deploy (recommended) - Python only, no Docker required
+  2. Container - For custom runtimes or complex dependencies
+Choice [1]: 1
+
+
+
+
+
+
+              Choice [1]: 1
+
+Select Python runtime version:
+  1. PYTHON_3_10
+  2. PYTHON_3_11
+  3. PYTHON_3_12
+  4. PYTHON_3_13
+Note: Current Python 3.14 not supported, using python3.11
+Choice [2]: 2
+
+
+
+
+
+
+              Choice [2]: 2
+✓ Deployment type: Direct Code Deploy (python.3.11)
+
+🔐 Execution Role
+Press Enter to auto-create execution role, or provide execution role ARN/name to use existing
+Execution role ARN/name (or press Enter to auto-create):
+
+
+
+
+
+
+                                                          Execution role ARN/name (or press Enter to auto-create):
+✓ Will auto-create execution role
+
+🏗️  S3 Bucket
+Press Enter to auto-create S3 bucket, or provide S3 URI/path to use existing
+S3 URI/path (or press Enter to auto-create):
+
+
+
+
+
+
+                                              S3 URI/path (or press Enter to auto-create):
+✓ Will auto-create S3 bucket
+
+🔐 Authorization Configuration
+By default, Bedrock AgentCore uses IAM authorization.
+Configure OAuth authorizer instead? (yes/no) [no]:
+
+
+
+
+
+
+                                                    Configure OAuth authorizer instead? (yes/no) [no]:
+✓ Using default IAM authorization
+
+🔒 Request Header Allowlist
+Configure which request headers are allowed to pass through to your agent.
+Common headers: Authorization, X-Amzn-Bedrock-AgentCore-Runtime-Custom-*
+Configure request header allowlist? (yes/no) [no]:
+
+
+
+
+
+
+                                                    Configure request header allowlist? (yes/no) [no]:
+✓ Using default request header configuration
+Configuring BedrockAgentCore agent: customer_support_agent
+
+Memory Configuration
+Tip: Use --disable-memory flag to skip memory entirely
+
+Existing memory resources found:
+  1. CustomerSupportMemory-G4A5HB2eLL
+     ID: CustomerSupportMemory-G4A5HB2eLL
+
+Options:
+  • Enter a number to use existing memory
+  • Press Enter to create new memory
+  • Type 's' to skip memory setup
+Your choice:
+
+
+
+
+
+
+              Your choice:
+✓ Short-term memory will be enabled (default)
+  • Stores conversations within sessions
+  • Provides immediate context recall
+
+Optional: Long-term memory
+  • Extracts user preferences across sessions
+  • Remembers facts and patterns
+  • Creates session summaries
+  • Note: Takes 120-180 seconds to process
+
+Enable long-term memory? (yes/no) [no]:
+
+
+
+
+
+
+                                         yesEnable long-term memory? (yes/no) [no]: yes
+✓ Configuring short-term + long-term memory
+Will create new memory with mode: STM_AND_LTM
+Memory configuration: Short-term + Long-term memory enabled
+Network mode: PUBLIC
+Setting 'customer_support_agent' as default agent
+╭─────────────────────────────────────────────────────────────── Configuration Success ───────────────────────────────────────────────────────────────╮
+│ Agent Details                                                                                                                                       │
+│ Agent Name: customer_support_agent                                                                                                                  │
+│ Deployment: direct_code_deploy                                                                                                                      │
+│ Region: us-east-1                                                                                                                                   │
+│ Account: 666445334748                                                                                                                               │
+│ Runtime: python3.11                                                                                                                                 │
+│                                                                                                                                                     │
+│ Configuration                                                                                                                                       │
+│ Execution Role: Auto-create                                                                                                                         │
+│ Network Mode: Public                                                                                                                                │
+│ S3 Bucket: Auto-create                                                                                                                              │
+│ Authorization: IAM (default)                                                                                                                        │
+│                                                                                                                                                     │
+│                                                                                                                                                     │
+│ Memory: Short-term + Long-term memory (30-day retention)                                                                                            │
+│                                                                                                                                                     │
+│                                                                                                                                                     │
+│ 📄 Config saved to: /voc/work/Project_starter/.bedrock_agentcore.yaml                                                                               │
+│                                                                                                                                                     │
+│ Next Steps:                                                                                                                                         │
+│ agentcore deploy                                                                                                                                    │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+

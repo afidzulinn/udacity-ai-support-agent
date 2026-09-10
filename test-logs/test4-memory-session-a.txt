@@ -1,0 +1,28 @@
+===================================================================
+TEST 4 — Long-Term Memory — Session A (store)
+Timestamp: 2026-09-10T07:09:53Z
+Command:
+  agentcore invoke '{"prompt": "Hi, I am Jane. I prefer concise responses.", "customer_id": "CUST-123", "session_id": "s-A"}'
+===================================================================
+
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+
+╭─────────────────────────────────────────────────────────────────────── customer_support_agent ────────────────────────────────────────────────────────────────────────╮
+│ Session: 21c3268b-f76e-4ef9-92ff-d175b9f7daaf                                                                                                                         │
+│ Request ID: 216d6531-2a32-47b1-b0d8-5b4e1f3b83b7                                                                                                                      │
+│ ARN: arn:aws:bedrock-agentcore:us-east-1:666445334748:runtime/customer_support_agent-UIR40b7qPD                                                                       │
+│ Logs: aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --follow            │
+│       aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --since 1h          │
+│ GenAI Dashboard: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#gen-ai-observability/agent-core                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Response:
+Hello Jane! I'll keep my responses concise. How can I assist you today?

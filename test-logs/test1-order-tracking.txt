@@ -1,0 +1,40 @@
+===================================================================
+TEST 1 — Order Tracking
+Timestamp: 2026-09-10T07:09:20Z
+Command:
+  agentcore invoke '{"prompt": "Can you track order ORD-001?", "customer_id": "CUST-123", "session_id": "t1"}'
+===================================================================
+
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+
+╭─────────────────────────────────────────────────────────────────────── customer_support_agent ────────────────────────────────────────────────────────────────────────╮
+│ Session: 21c3268b-f76e-4ef9-92ff-d175b9f7daaf                                                                                                                         │
+│ Request ID: f19997f0-f952-4e81-a102-b3835601dc6c                                                                                                                      │
+│ ARN: arn:aws:bedrock-agentcore:us-east-1:666445334748:runtime/customer_support_agent-UIR40b7qPD                                                                       │
+│ Logs: aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --follow            │
+│       aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --since 1h          │
+│ GenAI Dashboard: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#gen-ai-observability/agent-core                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Response:
+I've tracked your order ORD-001 for you:
+
+**Order Status:** SHIPPED
+**Customer ID:** CUST-123
+**Items:**
+- Wireless Headphones Pro (1 x $89.99)
+
+**Total:** $89.99
+**Carrier:** UPS
+**Tracking Number:** TRK987654321
+**Estimated Delivery:** September 12, 2026
+
+Your order is currently in transit and expected to be delivered by September 12, 2026. You can track the package using the tracking number TRK987654321 with UPS.

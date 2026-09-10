@@ -1,0 +1,52 @@
+===================================================================
+TEST 5 — Loyalty Discount Calculation
+Timestamp: 2026-09-10T07:11:08Z
+Command:
+  agentcore invoke '{"prompt": "I am a Gold member with 4250 points. Calculate my discount on a $150 standard order.", "customer_id": "CUST-123", "session_id": "t5"}'
+===================================================================
+
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+
+╭─────────────────────────────────────────────────────────────────────── customer_support_agent ────────────────────────────────────────────────────────────────────────╮
+│ Session: 21c3268b-f76e-4ef9-92ff-d175b9f7daaf                                                                                                                         │
+│ Request ID: 69f5dfe9-30c9-4a00-a774-a023e19be244                                                                                                                      │
+│ ARN: arn:aws:bedrock-agentcore:us-east-1:666445334748:runtime/customer_support_agent-UIR40b7qPD                                                                       │
+│ Logs: aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --follow            │
+│       aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --since 1h          │
+│ GenAI Dashboard: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#gen-ai-observability/agent-core                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Response:
+### Your Gold Membership Discount Breakdown
+
+**Original Order Total:** $150.00  
+**Your Tier:** Gold  
+**Product Category:** Standard  
+
+#### Applied Discounts:
+1. **Points Redemption:**  
+   - Points Redeemed: 4,000  
+   - Points Value: $40.00  
+   - Subtotal After Points: $110.00  
+
+2. **Gold Tier Discount:**  
+   - Discount Percentage: 10%  
+   - Discount Amount: $11.00  
+
+#### Final Totals:
+- **Final Order Total:** $99.00  
+- **Total Savings:** $51.00  
+
+#### Loyalty Points Update:
+- **Points Earned from Purchase:** 99  
+- **Remaining Points Balance:** 349  
+
+Your Gold membership provided significant savings on this order!

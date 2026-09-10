@@ -1,0 +1,15 @@
+{
+  "mcp": {
+    "apiGateway": {
+      "restApiId": "xvdkdar6k5",
+      "stage": "prod",
+      "apiGatewayToolConfiguration": {
+        "toolFilters": [
+          { "filterPath": "/orders/{order_id}", "methods": ["GET"] },
+          { "filterPath": "/customers/{customer_id}/orders", "methods": ["GET"] },
+          { "filterPath": "/customers/{customer_id}", "methods": ["GET"] }
+        ]
+      }
+    }
+  }
+}

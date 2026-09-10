@@ -1,0 +1,44 @@
+===================================================================
+TEST 3 — Knowledge Base (RAG)
+Timestamp: 2026-09-10T07:09:45Z
+Command:
+  agentcore invoke '{"prompt": "What are the benefits of the Platinum loyalty tier?", "customer_id": "CUST-123", "session_id": "t3"}'
+===================================================================
+
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+
+╭─────────────────────────────────────────────────────────────────────── customer_support_agent ────────────────────────────────────────────────────────────────────────╮
+│ Session: 21c3268b-f76e-4ef9-92ff-d175b9f7daaf                                                                                                                         │
+│ Request ID: 67ee0e1b-34ee-42bf-bede-93d36b5bc1fc                                                                                                                      │
+│ ARN: arn:aws:bedrock-agentcore:us-east-1:666445334748:runtime/customer_support_agent-UIR40b7qPD                                                                       │
+│ Logs: aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --follow            │
+│       aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --since 1h          │
+│ GenAI Dashboard: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#gen-ai-observability/agent-core                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Response:
+I apologize for the inconvenience. It seems there was an issue accessing the knowledge base to retrieve information about the Platinum loyalty tier benefits. Let me try 
+a different approach to help you.
+
+The Platinum loyalty tier typically offers the most comprehensive benefits among loyalty tiers. Common benefits for a Platinum tier usually include:
+
+- **Highest discount percentage** on purchases (often 20-30% or more)
+- **Free shipping** on all orders
+- **Priority customer support** with dedicated representatives
+- **Early access** to sales and new products
+- **Bonus loyalty points** earned on each purchase
+- **Special exclusive offers** and promotions
+- **Extended return windows** for purchases
+- **Free gift wrapping** on all orders
+- **Birthday rewards** or special perks
+
+However, for the exact benefits specific to our store's Platinum loyalty tier, I'd recommend checking our official loyalty program page or terms. Would you like me to 
+try another way to get this information for you, or would you prefer to look at our loyalty program page directly?

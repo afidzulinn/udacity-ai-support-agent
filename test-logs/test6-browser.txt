@@ -1,0 +1,39 @@
+===================================================================
+TEST 6 — Browser Tool
+Timestamp: 2026-09-10T07:11:20Z
+Command:
+  agentcore invoke '{"prompt": "Go to https://www.udacity.com and tell me the page title.", "customer_id": "CUST-123", "session_id": "t6"}'
+===================================================================
+
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+
+╭─────────────────────────────────────────────────────────────────────── customer_support_agent ────────────────────────────────────────────────────────────────────────╮
+│ Session: 21c3268b-f76e-4ef9-92ff-d175b9f7daaf                                                                                                                         │
+│ Request ID: c85fd3e0-fbe2-4fc7-ba65-2952b9b7b768                                                                                                                      │
+│ ARN: arn:aws:bedrock-agentcore:us-east-1:666445334748:runtime/customer_support_agent-UIR40b7qPD                                                                       │
+│ Logs: aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --follow            │
+│       aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --since 1h          │
+│ GenAI Dashboard: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#gen-ai-observability/agent-core                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Response:
+I apologize for the confusion. It seems there are restrictions on using the browser automation tool in this environment. Unfortunately, I'm unable to directly access or 
+navigate to external websites like udacity.com to retrieve the page title.
+
+However, I can tell you that typically, when you visit https://www.udacity.com, the page title you would see in your browser's tab or title bar is usually "Udacity: 
+Online Courses & Nanodegrees - Learn Coding, Data Science, AI & More".
+
+If you need to verify the current page title, you would need to:
+1. Open a web browser
+2. Go to https://www.udacity.com
+3. Look at the title in your browser's title bar or tab
+
+Is there anything else about Udacity's courses or programs that I can help you with using my available tools?

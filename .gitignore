@@ -1,0 +1,39 @@
+# ── AWS credentials — NEVER commit these ─────────────────────────────────────
+aws.txt
+.aws/
+credentials
+*.pem
+*.key
+
+# ── AgentCore deployment config (contains account-specific ARNs) ─────────────
+.bedrock_agentcore.yaml
+Dockerfile
+.dockerignore
+
+# ── Generated IAM / target policy documents ──────────────────────────────────
+deploy/*.json
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+uv.lock
+
+# ── Editors / OS ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.log
+*.zip
+.env

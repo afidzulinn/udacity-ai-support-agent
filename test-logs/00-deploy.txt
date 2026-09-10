@@ -1,0 +1,134 @@
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+
+🚀 Launching Bedrock AgentCore (cloud mode - RECOMMENDED)...
+   • Deploy Python code directly to runtime
+   • No Docker required (DEFAULT behavior)
+   • Production-ready deployment
+
+💡 Deployment options:
+   • agentcore deploy                → Cloud (current)
+   • agentcore deploy --local        → Local development
+
+Launching with direct_code_deploy deployment for agent 'customer_support_agent'
+Creating memory resource for agent: customer_support_agent
+Creating new memory with LTM strategies...
+⏳ Creating memory resource (this may take 30-180 seconds)...
+Created memory: customer_support_agent_mem-uIhh31AduM
+Created memory customer_support_agent_mem-uIhh31AduM, waiting for ACTIVE status...
+Waiting for memory customer_support_agent_mem-uIhh31AduM to return to ACTIVE state and strategies to reach terminal states...
+[07:04:19]    ⏳ Memory: CREATING, Strategies: 0/3 active (10s elapsed)                                                                 manager.py:1333
+[07:04:30]    ⏳ Memory: CREATING, Strategies: 0/3 active (20s elapsed)                                                                 manager.py:1333
+[07:04:40]    ⏳ Memory: CREATING, Strategies: 0/3 active (31s elapsed)                                                                 manager.py:1333
+[07:04:51]    ⏳ Memory: CREATING, Strategies: 0/3 active (41s elapsed)                                                                 manager.py:1333
+[07:05:01]    ⏳ Memory: CREATING, Strategies: 0/3 active (52s elapsed)                                                                 manager.py:1333
+[07:05:11]    ⏳ Memory: CREATING, Strategies: 0/3 active (62s elapsed)                                                                 manager.py:1333
+[07:05:22]    ⏳ Memory: CREATING, Strategies: 0/3 active (72s elapsed)                                                                 manager.py:1333
+[07:05:32]    ⏳ Memory: CREATING, Strategies: 0/3 active (83s elapsed)                                                                 manager.py:1333
+[07:05:43]    ⏳ Memory: CREATING, Strategies: 0/3 active (93s elapsed)                                                                 manager.py:1333
+[07:05:53]    ⏳ Memory: CREATING, Strategies: 0/3 active (104s elapsed)                                                                manager.py:1333
+[07:06:04]    ⏳ Memory: CREATING, Strategies: 0/3 active (114s elapsed)                                                                manager.py:1333
+[07:06:14]    ⏳ Memory: CREATING, Strategies: 0/3 active (125s elapsed)                                                                                  manager.py:1333
+[07:06:24]    ⏳ Memory: CREATING, Strategies: 0/3 active (135s elapsed)                                                                                  manager.py:1333
+[07:06:35]    ⏳ Memory: CREATING, Strategies: 0/3 active (145s elapsed)                                                                                  manager.py:1333
+Memory customer_support_agent_mem-uIhh31AduM is ACTIVE and all strategies are in terminal states (took 151 seconds)
+[07:06:40]    ✅ Memory is ACTIVE (took 151s)                                                                                                             manager.py:1353
+ObservabilityDeliveryManager initialized for region: us-east-1, account: 666445334748
+Created log group: /aws/vendedlogs/bedrock-agentcore/memory/APPLICATION_LOGS/customer_support_agent_mem-uIhh31AduM
+✅ Logs delivery enabled for memory/customer_support_agent_mem-uIhh31AduM
+Failed to enable observability for memory/customer_support_agent_mem-uIhh31AduM: ValidationException - X-Ray Delivery Destination is supported with CloudWatch Logs as a Trace Segment Destination. Please enable the CloudWatch Logs destination for your traces using the UpdateTraceSegmentDestination API (https://docs.aws.amazon.com/xray/latest/api/API_UpdateTraceSegmentDestination.html)
+⚠️ Failed to enable observability: ValidationException: X-Ray Delivery Destination is supported with CloudWatch Logs as a Trace Segment Destination. Please enable the 
+CloudWatch Logs destination for your traces using the UpdateTraceSegmentDestination API 
+(https://docs.aws.amazon.com/xray/latest/api/API_UpdateTraceSegmentDestination.html)
+Memory created and active: customer_support_agent_mem-uIhh31AduM
+Ensuring execution role...
+Getting or creating execution role for agent: customer_support_agent
+Using AWS region: us-east-1, account ID: 666445334748
+Role name: AmazonBedrockAgentCoreSDKRuntime-us-east-1-aa96c3a063
+Role doesn't exist, creating new execution role: AmazonBedrockAgentCoreSDKRuntime-us-east-1-aa96c3a063
+Starting execution role creation process for agent: customer_support_agent
+✓ Role creating: AmazonBedrockAgentCoreSDKRuntime-us-east-1-aa96c3a063
+Creating IAM role: AmazonBedrockAgentCoreSDKRuntime-us-east-1-aa96c3a063
+✓ Role created: arn:aws:iam::666445334748:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-aa96c3a063
+✓ Execution policy attached: BedrockAgentCoreRuntimeExecutionPolicy-customer_support_agent
+Role creation complete and ready for use with Bedrock AgentCore
+Execution role available: arn:aws:iam::666445334748:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-aa96c3a063
+Using entrypoint: main.py (relative to /voc/work/Project_starter)
+Creating deployment package...
+📦 No cached dependencies found, will build
+Building dependencies (this may take a minute)...
+Resolving pyproject.toml with uv...
+✓ Dependencies resolved with uv
+Building dependencies for Linux ARM64 Runtime (manylinux2014_aarch64)
+Installing dependencies with uv for aarch64-manylinux2014 (cross-compiling for Linux ARM64)...
+Installing dependencies with uv for aarch64-manylinux_2_17...
+Installing dependencies with uv for aarch64-manylinux_2_28...
+✓ Dependencies installed with uv
+Fixed hardcoded shebangs in 29 bin/ script(s)
+Creating dependencies.zip...
+✓ Dependencies cached
+Packaging source code...
+Creating deployment package...
+✓ Deployment package ready: 101.56 MB
+Getting or creating S3 bucket for agent: customer_support_agent
+S3 bucket available: s3://bedrock-agentcore-codebuild-sources-666445334748-us-east-1
+Uploading deployment package to S3...
+Uploading to s3://bedrock-agentcore-codebuild-sources-666445334748-us-east-1/customer_support_agent/deployment.zip...
+✓ Deployment package uploaded: s3://bedrock-agentcore-codebuild-sources-666445334748-us-east-1/customer_support_agent/deployment.zip
+Deploying to Bedrock AgentCore Runtime...
+✅ Agent created/updated: arn:aws:bedrock-agentcore:us-east-1:666445334748:runtime/customer_support_agent-UIR40b7qPD
+Waiting for agent endpoint to be ready...
+Enabling observability...
+Created/updated CloudWatch Logs resource policy
+Transaction Search configuration failed: An error occurred (AccessDeniedException) when calling the UpdateTraceSegmentDestination operation: User: arn:aws:sts::666445334748:assumed-role/voclabs/user5338573=470131bf-04e0-48da-bf99-3cd8f1028f4a is not authorized to perform: application-signals:StartDiscovery because no identity-based policy allows the application-signals:StartDiscovery action (Service: ApplicationSignals, Status Code: 403, Request ID: 8a165028-08fb-46c8-894f-de21b343f99f) (SDK Attempt Count: 1)
+Agent launch will continue without Transaction Search
+ObservabilityDeliveryManager initialized for region: us-east-1, account: 666445334748
+✅ Logs auto-created by AWS for runtime/customer_support_agent-UIR40b7qPD
+Failed to enable observability for runtime/customer_support_agent-UIR40b7qPD: ValidationException - X-Ray Delivery Destination is supported with CloudWatch Logs as a Trace Segment Destination. Please enable the CloudWatch Logs destination for your traces using the UpdateTraceSegmentDestination API (https://docs.aws.amazon.com/xray/latest/api/API_UpdateTraceSegmentDestination.html)
+⚠️ Traces delivery setup warning for agent customer_support_agent-UIR40b7qPD: ValidationException: X-Ray Delivery Destination is supported with CloudWatch Logs as a Trace Segment Destination. Please enable the CloudWatch Logs destination for your traces using the UpdateTraceSegmentDestination API (https://docs.aws.amazon.com/xray/latest/api/API_UpdateTraceSegmentDestination.html)
+🔍 GenAI Observability Dashboard: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#gen-ai-observability/agent-core
+✅ Deployment completed successfully - Agent: arn:aws:bedrock-agentcore:us-east-1:666445334748:runtime/customer_support_agent-UIR40b7qPD
+Bucket doesn't exist, creating new S3 bucket: bedrock-agentcore-codebuild-sources-666445334748-us-east-1
+✅ Created S3 bucket: bedrock-agentcore-codebuild-sources-666445334748-us-east-1
+╭───────────────────────────────────────────────────────────────────────── Deployment Success ──────────────────────────────────────────────────────────────────────────╮
+│ Agent Details:                                                                                                                                                        │
+│ Agent Name: customer_support_agent                                                                                                                                    │
+│ Agent ARN: arn:aws:bedrock-agentcore:us-east-1:666445334748:runtime/customer_support_agent-UIR40b7qPD                                                                 │
+│ Deployment Type: Direct Code Deploy                                                                                                                                   │
+│                                                                                                                                                                       │
+│ 📦 Code package deployed to Bedrock AgentCore                                                                                                                         │
+│                                                                                                                                                                       │
+│ Next Steps:                                                                                                                                                           │
+│    agentcore status                                                                                                                                                   │
+│    agentcore invoke '{"prompt": "Hello"}'                                                                                                                             │
+│                                                                                                                                                                       │
+│ 📋 CloudWatch Logs:                                                                                                                                                   │
+│    /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs"                                      │
+│    /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-names "otel-rt-logs"                                                        │
+│                                                                                                                                                                       │
+│ 🔍 GenAI Observability Dashboard:                                                                                                                                     │
+│    https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#gen-ai-observability/agent-core                                                                    │
+│                                                                                                                                                                       │
+│ ⏱️  Note: Observability data may take up to 10 minutes to appear after first launch                                                                                   │
+│                                                                                                                                                                       │
+│ 💡 Tail logs with:                                                                                                                                                    │
+│    aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --follow               │
+│    aws logs tail /aws/bedrock-agentcore/runtimes/customer_support_agent-UIR40b7qPD-DEFAULT --log-stream-name-prefix "2026/09/10/[runtime-logs" --since 1h             │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+⚠️ Recommendation: The Starter Toolkit CLI is no longer supported.
+   Please use the AgentCore CLI (@aws/agentcore) to create, develop, and deploy agents on Amazon Bedrock AgentCore.
+   New Bedrock AgentCore features are only accessible in the AgentCore CLI.
+
+   To uninstall this starter toolkit, run: pip uninstall bedrock-agentcore-starter-toolkit
+   To install the AgentCore CLI: npm install -g @aws/agentcore
+   To import existing agents, run: agentcore import
+   Set AGENTCORE_SUPPRESS_RECOMMENDATION=1 to silence this warning.
+
