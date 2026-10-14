@@ -8,6 +8,9 @@ export AGENTCORE_SUPPRESS_RECOMMENDATION=1
 
 run() {  # $1 = label, $2 = JSON payload
   echo; echo "================ $1 ================"
+  # Show the exact command, as if typed at the prompt, so the screenshot
+  # includes both the `agentcore invoke` call and its response.
+  echo "$(whoami)@$(hostname):$(pwd)\$ agentcore invoke '$2'"
   uv run agentcore invoke "$2"
   read -rp "Screenshot done? Press Enter for the next test..."
 }
