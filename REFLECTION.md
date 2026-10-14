@@ -24,8 +24,8 @@ was subtle: `agentcore configure` without `--disable-memory` had created a secon
 memory resource and scoped the role to it, while `main.py` pointed at
 `CustomerSupportMemory`. I resolved it by redeploying with `--disable-memory`, then
 running `setup_permissions.py`, which grants `bedrock:Retrieve` on my KB, memory
-read/write on my memory ID, and browser-session actions. I confirmed each fix in the
-CloudWatch runtime logs before re-running the six tests.
+read/write on my memory ID, and browser-session actions. Re-running the six tests
+afterwards confirmed the fix: the browser now returns the live Udacity page title.
 
 ## Production consideration: securing and monitoring the Gateway
 

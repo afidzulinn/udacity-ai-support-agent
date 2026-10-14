@@ -135,6 +135,9 @@ class MemoryHook(HookProvider):
         self.memory_client = memory_client
         self.memory_id = memory_id
         self.namespaces = get_namespaces(memory_client, memory_id)
+        # The customer's words before memories were prepended, so the saved
+        # event never re-stores old context as if the customer had said it.
+        self.original_query = None
 
     def retrieve_customer_context(self, event: MessageAddedEvent):
         """Retrieve relevant memories and prepend them to the user message."""
@@ -153,6 +156,7 @@ class MemoryHook(HookProvider):
             return
 
         user_query = content[0]["text"]
+        self.original_query = user_query
 
         try:
             all_context = []
@@ -181,7 +185,8 @@ class MemoryHook(HookProvider):
             if all_context:
                 context_text = "\n".join(all_context)
                 last_message["content"][0]["text"] = (
-                    f"Customer Context:\n{context_text}\n\n{user_query}"
+                    "Customer Context (remembered from previous conversations "
+                    f"with this customer):\n{context_text}\n\n{user_query}"
                 )
                 logger.info("Injected %d memories into the user message", len(all_context))
 
@@ -212,6 +217,10 @@ class MemoryHook(HookProvider):
 
                 if customer_query and agent_response:
                     break
+
+            # Save what the customer actually typed, not the context-augmented text.
+            if customer_query and customer_query.startswith("Customer Context") and self.original_query:
+                customer_query = self.original_query
 
             if customer_query and agent_response:
                 self.memory_client.create_event(
@@ -424,8 +433,10 @@ You can:
 Guidelines:
 - Always call a tool when the answer depends on live data, stored policy, or arithmetic.
   Never guess an order status, a policy detail, or a discount figure.
-- When a "Customer Context:" block appears before a question, treat it as things you
-  already know about this customer from previous conversations, and use it naturally.
+- When a "Customer Context" block appears before a question, it is what you remember
+  about this customer from previous conversations (their name, preferences, past
+  orders). Use it naturally: if they ask whether you remember them, answer from it.
+  The customer did not type that block, so never say they "provided" it.
 - Report tool results faithfully: quote tracking numbers, refund IDs, and totals exactly
   as returned.
 - Be clear, concise, and friendly.
