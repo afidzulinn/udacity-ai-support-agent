@@ -20,7 +20,8 @@ uv run agentcore configure --entrypoint main.py --name "$NAME" \
   --deployment-type direct_code_deploy --runtime PYTHON_3_13 --disable-memory
 
 echo "== 3/4 Deploying"
-uv run agentcore deploy
+# Updates the runtime from the first submission instead of failing on the name.
+uv run agentcore deploy --auto-update-on-conflict
 
 echo "== 4/4 Granting KB / Memory / Browser permissions"
 uv run setup_permissions.py
